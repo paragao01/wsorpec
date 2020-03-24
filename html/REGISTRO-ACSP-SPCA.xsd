@@ -1,0 +1,1075 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SPCA-XML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="VERSAO"/>
+        <xs:element name="SOLICITACAO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="S-CODIGO"/>
+              <xs:element type="xs:string" name="S-SENHA"/>
+              <xs:element type="xs:string" name="S-CONSULTA"/>
+              <xs:element type="xs:string" name="S-SOLICITANTE"/>
+              <xs:element type="xs:string" name="S-CPF"/>
+              <xs:element type="xs:string" name="S-TIPO-CREDITO"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RESPOSTA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RESPOSTA-RETORNO">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="STATUS-RESPOSTA"/>
+                    <xs:element type="xs:string" name="MENSAGEM-RESPOSTA"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="NUMERO-RESPOSTA"/>
+              <xs:element type="xs:string" name="ASSOCIADO-SOLICITANTE"/>
+              <xs:element type="xs:string" name="NOME-CONSULTA"/>
+              <xs:element type="xs:string" name="IP-SOLICITANTE"/>
+              <xs:element name="REGISTRO-ACSP-SPCA">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SPCA-000-MENSAGEM" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-000-TEXTO"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-020-ACOES">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-020-RESUMO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-020-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-020-TOTAL"/>
+                                <xs:element name="SPCA-020-DATA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-020-PRIMEIRA"/>
+                                      <xs:element type="xs:string" name="SPCA-020-ULTIMA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="SPCA-021-REGISTRO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-021-VARA"/>
+                                <xs:element type="xs:string" name="SPCA-021-PROCESSO"/>
+                                <xs:element type="xs:string" name="SPCA-021-ACAO"/>
+                                <xs:element type="xs:string" name="SPCA-021-DATA"/>
+                                <xs:element type="xs:string" name="SPCA-021-AUTOR"/>
+                                <xs:element type="xs:string" name="SPCA-021-VALOR"/>
+                                <xs:element type="xs:string" name="SPCA-021-PRACA"/>
+                                <xs:element type="xs:string" name="SPCA-021-ESTADO"/>
+                                <xs:element type="xs:string" name="SPCA-021-CODIGO"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-022-PROTESTOS">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-022-RESUMO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-022-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-022-TOTAL"/>
+                                <xs:element name="SPCA-022-DATA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-022-PRIMEIRA"/>
+                                      <xs:element type="xs:string" name="SPCA-022-ULTIMA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-022-VALORES">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-022-MOEDA"/>
+                                      <xs:element type="xs:string" name="SPCA-022-VALOR"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="SPCA-022-UF"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="SPCA-023-REGISTRO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-023-TIPO"/>
+                                <xs:element type="xs:string" name="SPCA-023-CARTORIO"/>
+                                <xs:element type="xs:string" name="SPCA-023-DATA"/>
+                                <xs:element type="xs:string" name="SPCA-023-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-023-MOEDA"/>
+                                <xs:element type="xs:string" name="SPCA-023-VALOR"/>
+                                <xs:element type="xs:string" name="SPCA-023-PRACA"/>
+                                <xs:element type="xs:string" name="SPCA-023-ESTADO"/>
+                                <xs:element type="xs:string" name="SPCA-023-CODIGO"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-108-DEBITO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-108-RESUMO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-108-MENSAGEM"/>
+                                <xs:element name="SPCA-108-TOTAL">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-108-DEVEDOR"/>
+                                      <xs:element type="xs:string" name="SPCA-108-AVALISTA"/>
+                                      <xs:element type="xs:string" name="SPCA-108-VALOR"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-108-PRIMEIRO-DEB">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-108-P-DATA"/>
+                                      <xs:element type="xs:string" name="SPCA-108-P-VALOR"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-108-MAIOR-DEB">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-108-M-DATA"/>
+                                      <xs:element type="xs:string" name="SPCA-108-M-VALOR"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-109-PROTESTO-SP">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-109-RESUMO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-109-MENSAGEM"/>
+                                <xs:element name="SPCA-109-TOTAL">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-109-PROTESTO"/>
+                                      <xs:element type="xs:string" name="SPCA-109-VALOR"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-109-PRIMEIRO-TP">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-109-P-DATA"/>
+                                      <xs:element type="xs:string" name="SPCA-109-P-VALOR"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-109-MAIOR-PROT">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-109-M-DATA"/>
+                                      <xs:element type="xs:string" name="SPCA-109-M-VALOR"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-111-CONSULTA">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-111-RESUMO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-111-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-111-TOTAL"/>
+                                <xs:element name="SPCA-111-DATA-1">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-111-ANO-1"/>
+                                      <xs:element type="xs:string" name="SPCA-111-MES-1"/>
+                                      <xs:element type="xs:string" name="SPCA-111-QTD-1"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-111-DATA-2">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-111-ANO-2"/>
+                                      <xs:element type="xs:string" name="SPCA-111-MES-2"/>
+                                      <xs:element type="xs:string" name="SPCA-111-QTD-2"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-111-DATA-3">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-111-ANO-3"/>
+                                      <xs:element type="xs:string" name="SPCA-111-MES-3"/>
+                                      <xs:element type="xs:string" name="SPCA-111-QTD-3"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-111-DATA-4">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-111-ANO-4"/>
+                                      <xs:element type="xs:string" name="SPCA-111-MES-4"/>
+                                      <xs:element type="xs:string" name="SPCA-111-QTD-4"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-123-INFORMACAO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-123-COMPLEMENTAR" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-123-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-123-TEXTO"/>
+                                <xs:element type="xs:string" name="SPCA-123-TIPO"/>
+                                <xs:element type="xs:string" name="SPCA-123-UF"/>
+                                <xs:element type="xs:string" name="SPCA-123-DESCRICAO"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-124-DEBITO" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-124-MENSAGEM"/>
+                          <xs:element type="xs:string" name="SPCA-124-TIPO"/>
+                          <xs:element type="xs:string" name="SPCA-124-DESCRICAO"/>
+                          <xs:element type="xs:string" name="SPCA-124-CONTRATO"/>
+                          <xs:element name="SPCA-124-DATA">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-124-REGISTRO"/>
+                                <xs:element type="xs:string" name="SPCA-124-DISPONIVEL"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="SPCA-124-MOEDA"/>
+                          <xs:element type="xs:string" name="SPCA-124-VALOR"/>
+                          <xs:element type="xs:string" name="SPCA-124-VALORN"/>
+                          <xs:element type="xs:string" name="SPCA-124-SITUACAO"/>
+                          <xs:element type="xs:string" name="SPCA-124-INFORMANTE"/>
+                          <xs:element type="xs:string" name="SPCA-124-CONSULENTE"/>
+                          <xs:element type="xs:string" name="SPCA-124-CIDADE"/>
+                          <xs:element type="xs:string" name="SPCA-124-UF"/>
+                          <xs:element type="xs:string" name="SPCA-124-CONDICAO"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-125-PROTESTO" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-125-MENSAGEM"/>
+                          <xs:element type="xs:string" name="SPCA-125-TIPO"/>
+                          <xs:element type="xs:string" name="SPCA-125-DESCRICAO"/>
+                          <xs:element type="xs:string" name="SPCA-125-CONTRATO"/>
+                          <xs:element name="SPCA-125-DATA">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-125-REGISTRO"/>
+                                <xs:element type="xs:string" name="SPCA-125-DISPONIVEL"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="SPCA-125-MOEDA"/>
+                          <xs:element type="xs:string" name="SPCA-125-VALOR"/>
+                          <xs:element type="xs:string" name="SPCA-125-VALORN"/>
+                          <xs:element type="xs:string" name="SPCA-125-SITUACAO"/>
+                          <xs:element type="xs:string" name="SPCA-125-INFORMANTE"/>
+                          <xs:element type="xs:string" name="SPCA-125-CIDADE"/>
+                          <xs:element type="xs:string" name="SPCA-125-UF"/>
+                          <xs:element type="xs:string" name="SPCA-125-CONDICAO"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-126-CONSULTA" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-126-MENSAGEM"/>
+                          <xs:element type="xs:string" name="SPCA-126-TIPO"/>
+                          <xs:element type="xs:string" name="SPCA-126-DESCRICAO"/>
+                          <xs:element type="xs:string" name="SPCA-126-DATA"/>
+                          <xs:element type="xs:string" name="SPCA-126-INFORMANTE"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-131-TELEFONE">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-131-DOCVINCULADO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-131-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-131-DDD"/>
+                                <xs:element type="xs:string" name="SPCA-131-NUMERO"/>
+                                <xs:element type="xs:string" name="SPCA-131-ENDERECO"/>
+                                <xs:element type="xs:string" name="SPCA-131-BAIRRO"/>
+                                <xs:element type="xs:string" name="SPCA-131-CEP"/>
+                                <xs:element type="xs:string" name="SPCA-131-CIDADE"/>
+                                <xs:element type="xs:string" name="SPCA-131-UF"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-136-CONSULTA">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-136-RESUMO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-136-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-136-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-136-DOCUMENTO"/>
+                                <xs:element name="SPCA-136-PERIODO">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-136-INI-ANO"/>
+                                      <xs:element type="xs:string" name="SPCA-136-INI-MES"/>
+                                      <xs:element type="xs:string" name="SPCA-136-FIN-ANO"/>
+                                      <xs:element type="xs:string" name="SPCA-136-FIN-MES"/>
+                                      <xs:element type="xs:string" name="SPCA-136-QTD"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-136-ULTIMA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-136-U-ANO"/>
+                                      <xs:element type="xs:string" name="SPCA-136-U-MES"/>
+                                      <xs:element type="xs:string" name="SPCA-136-U-QTD"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-136-PENULTIMA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-136-P-ANO"/>
+                                      <xs:element type="xs:string" name="SPCA-136-P-MES"/>
+                                      <xs:element type="xs:string" name="SPCA-136-P-QTD"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-136-ANTEPENULTIM">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-136-A-ANO"/>
+                                      <xs:element type="xs:string" name="SPCA-136-A-MES"/>
+                                      <xs:element type="xs:string" name="SPCA-136-A-QTD"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-137-CONSULTA">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-137-SEGMENTADO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-137-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-137-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-137-DOCUMENTO"/>
+                                <xs:element name="SPCA-137-DADOS">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-137-OCORRENCIA"/>
+                                      <xs:element type="xs:string" name="SPCA-137-DATA"/>
+                                      <xs:element type="xs:string" name="SPCA-137-MOEDA"/>
+                                      <xs:element type="xs:string" name="SPCA-137-VALOR"/>
+                                      <xs:element type="xs:string" name="SPCA-137-INFORMANTE"/>
+                                      <xs:element name="SPCA-137-RAMO">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="SPCA-137-COD-ATIV"/>
+                                            <xs:element type="xs:string" name="SPCA-137-R-DESCR"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="SPCA-137-SEGMENTO">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="SPCA-137-COD-SEG"/>
+                                            <xs:element type="xs:string" name="SPCA-137-S-DESCR"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="SPCA-137-GRUPO">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="SPCA-137-COD-GRP"/>
+                                            <xs:element type="xs:string" name="SPCA-137-G-DESCR"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-211-SUSTADO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-211-CHQ-TALAO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-211-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-211-OCORRENCIA"/>
+                                <xs:element type="xs:string" name="SPCA-211-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-211-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-211-BANCO"/>
+                                <xs:element type="xs:string" name="SPCA-211-AGENCIA"/>
+                                <xs:element type="xs:string" name="SPCA-211-CONTA"/>
+                                <xs:element type="xs:string" name="SPCA-211-CHEQUE"/>
+                                <xs:element name="SPCA-211-ALINEA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-211-A-NUMERO"/>
+                                      <xs:element type="xs:string" name="SPCA-211-A-DESCRICAO"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-211-DATA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-211-REGISTRO"/>
+                                      <xs:element type="xs:string" name="SPCA-211-DISPONIVEL"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="SPCA-211-INFORMANTE"/>
+                                <xs:element type="xs:string" name="SPCA-211-INDICADOR"/>
+                                <xs:element type="xs:string" name="SPCA-211-INDICACAO"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-214-CCF-RESUMO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-214-DEVOLUCOES">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-214-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-214-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-214-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-214-NOME"/>
+                                <xs:element type="xs:string" name="SPCA-214-TOTAL-NOME"/>
+                                <xs:element name="SPCA-214-DEVOLVIDOS">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-214-TOTAL"/>
+                                      <xs:element type="xs:string" name="SPCA-214-TOTAL-12"/>
+                                      <xs:element type="xs:string" name="SPCA-214-TOTAL-13"/>
+                                      <xs:element type="xs:string" name="SPCA-214-TOTAL-14"/>
+                                      <xs:element type="xs:string" name="SPCA-214-TOTAL-99"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-220-CONSULTAS-CH">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-220-RESUMO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-220-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-220-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-220-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-220-TOTAL"/>
+                                <xs:element name="SPCA-220-DATA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-220-PRIMEIRA"/>
+                                      <xs:element type="xs:string" name="SPCA-220-ULTIMA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-221-SINTESE">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-221-MENSAGEM"/>
+                          <xs:element type="xs:string" name="SPCA-221-NOME"/>
+                          <xs:element type="xs:string" name="SPCA-221-CPF"/>
+                          <xs:element type="xs:string" name="SPCA-221-NASCIMENTO"/>
+                          <xs:element type="xs:string" name="SPCA-221-MAE"/>
+                          <xs:element type="xs:string" name="SPCA-221-TIT-ELEITOR"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-223-TELEFONE">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-223-CONFIRMACAO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-223-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-223-DDD"/>
+                                <xs:element type="xs:string" name="SPCA-223-FONE"/>
+                                <xs:element type="xs:string" name="SPCA-223-TIPO"/>
+                                <xs:element type="xs:string" name="SPCA-223-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-223-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-223-NOME"/>
+                                <xs:element type="xs:string" name="SPCA-223-ENDERECO"/>
+                                <xs:element type="xs:string" name="SPCA-223-BAIRRO"/>
+                                <xs:element type="xs:string" name="SPCA-223-CEP"/>
+                                <xs:element type="xs:string" name="SPCA-223-CIDADE"/>
+                                <xs:element type="xs:string" name="SPCA-223-UF"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-224-ENDERECODA">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-224-AG-BANCARIA">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-224-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-224-BANCO"/>
+                                <xs:element type="xs:string" name="SPCA-224-BANCO-NOME"/>
+                                <xs:element type="xs:string" name="SPCA-224-AGENCIA"/>
+                                <xs:element type="xs:string" name="SPCA-224-AGENCIA-NOME"/>
+                                <xs:element type="xs:string" name="SPCA-224-ENDERECO"/>
+                                <xs:element type="xs:string" name="SPCA-224-BAIRRO"/>
+                                <xs:element type="xs:string" name="SPCA-224-CEP"/>
+                                <xs:element type="xs:string" name="SPCA-224-CIDADE"/>
+                                <xs:element type="xs:string" name="SPCA-224-UF"/>
+                                <xs:element type="xs:string" name="SPCA-224-DDD"/>
+                                <xs:element type="xs:string" name="SPCA-224-TEL-1"/>
+                                <xs:element type="xs:string" name="SPCA-224-TEL-2"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-227-CEP">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-227-CONFIRMACAO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-227-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-227-CEPN"/>
+                                <xs:element type="xs:string" name="SPCA-227-ENDERECO"/>
+                                <xs:element type="xs:string" name="SPCA-227-BAIRRO"/>
+                                <xs:element type="xs:string" name="SPCA-227-CIDADE"/>
+                                <xs:element type="xs:string" name="SPCA-227-UF"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-242-CCF">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-242-DEVOLUCOES" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-242-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-242-TIPO"/>
+                                <xs:element type="xs:string" name="SPCA-242-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-242-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-242-NOME"/>
+                                <xs:element type="xs:string" name="SPCA-242-BANCO"/>
+                                <xs:element type="xs:string" name="SPCA-242-AGENCIA"/>
+                                <xs:element name="SPCA-242-MOTIVO-12">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-242-12-TOTAL"/>
+                                      <xs:element type="xs:string" name="SPCA-242-12-DTULTIMO"/>
+                                      <xs:element type="xs:string" name="SPCA-242-12-ALINEA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-242-MOTIVO-13">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-242-13-TOTAL"/>
+                                      <xs:element type="xs:string" name="SPCA-242-13-DTULTIMO"/>
+                                      <xs:element type="xs:string" name="SPCA-242-13-ALINEA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-242-MOTIVO-14">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-242-14-TOTAL"/>
+                                      <xs:element type="xs:string" name="SPCA-242-14-DTULTIMO"/>
+                                      <xs:element type="xs:string" name="SPCA-242-14-ALINEA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-242-MOTIVO-99">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-242-99-TOTAL"/>
+                                      <xs:element type="xs:string" name="SPCA-242-99-DTULTIMO"/>
+                                      <xs:element type="xs:string" name="SPCA-242-99-ALINEA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-243-INFORMACAO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-243-COMPLEMENTAR">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-243-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-243-TEXTO"/>
+                                <xs:element type="xs:string" name="SPCA-243-TIPO"/>
+                                <xs:element type="xs:string" name="SPCA-243-UF"/>
+                                <xs:element type="xs:string" name="SPCA-243-DESCRICAO"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-244-CH-DEVOLUCAO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-244-PORUSUARIO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-244-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-244-TIPO"/>
+                                <xs:element type="xs:string" name="SPCA-244-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-244-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-244-BANCO"/>
+                                <xs:element type="xs:string" name="SPCA-244-AGENCIA"/>
+                                <xs:element type="xs:string" name="SPCA-244-CONTA"/>
+                                <xs:element name="SPCA-244-CHEQUES">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-244-INICIAL"/>
+                                      <xs:element type="xs:string" name="SPCA-244-FINAL"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-244-ALINEA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-244-A-NUMERO"/>
+                                      <xs:element type="xs:string" name="SPCA-244-A-DESCRICAO"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-244-DATA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-244-REGISTRO"/>
+                                      <xs:element type="xs:string" name="SPCA-244-DISPONIVEL"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="SPCA-244-MOEDA"/>
+                                <xs:element type="xs:string" name="SPCA-244-VALOR"/>
+                                <xs:element type="xs:string" name="SPCA-244-VALORN"/>
+                                <xs:element type="xs:string" name="SPCA-244-INFORMANTE"/>
+                                <xs:element type="xs:string" name="SPCA-244-CIDADE"/>
+                                <xs:element type="xs:string" name="SPCA-244-UF"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-245-CH-SUSTADO21">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-245-ALINEA-21" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-245-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-245-TIPO"/>
+                                <xs:element type="xs:string" name="SPCA-245-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-245-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-245-BANCO"/>
+                                <xs:element type="xs:string" name="SPCA-245-AGENCIA"/>
+                                <xs:element type="xs:string" name="SPCA-245-CONTA"/>
+                                <xs:element name="SPCA-245-CHEQUES">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-245-INICIAL"/>
+                                      <xs:element type="xs:string" name="SPCA-245-FINAL"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-245-ALINEA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-245-A-NUMERO"/>
+                                      <xs:element type="xs:string" name="SPCA-245-A-DESCRICAO"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SPCA-245-DATA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-245-REGISTRO"/>
+                                      <xs:element type="xs:string" name="SPCA-245-DISPONIVEL"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="SPCA-245-MOEDA"/>
+                                <xs:element type="xs:string" name="SPCA-245-VALOR"/>
+                                <xs:element type="xs:string" name="SPCA-245-VALORN"/>
+                                <xs:element type="xs:string" name="SPCA-245-INFORMANTE"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-246-HISTORICO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-246-CHEQUES" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-246-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-246-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-246-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-246-BANCO"/>
+                                <xs:element type="xs:string" name="SPCA-246-AGENCIA"/>
+                                <xs:element type="xs:string" name="SPCA-246-CONTA"/>
+                                <xs:element type="xs:string" name="SPCA-246-CHEQUE"/>
+                                <xs:element name="SPCA-246-CONSULTA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-246-DATA"/>
+                                      <xs:element type="xs:string" name="SPCA-246-HORA"/>
+                                      <xs:element type="xs:string" name="SPCA-246-REDE-LOJA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-247-HISTORICO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-247-DA-CONTA" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-247-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-247-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-247-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-247-BANCO"/>
+                                <xs:element type="xs:string" name="SPCA-247-AGENCIA"/>
+                                <xs:element type="xs:string" name="SPCA-247-CONTA"/>
+                                <xs:element name="SPCA-247-CONSULTA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-247-DATA"/>
+                                      <xs:element type="xs:string" name="SPCA-247-HORA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-248-CONSULTA">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-248-CHEQUE" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-248-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-248-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-248-DOCUMENTO"/>
+                                <xs:element name="SPCA-248-DADOS">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-248-HORA"/>
+                                      <xs:element type="xs:string" name="SPCA-248-DATA"/>
+                                      <xs:element type="xs:string" name="SPCA-248-MOEDA"/>
+                                      <xs:element type="xs:string" name="SPCA-248-VALOR"/>
+                                      <xs:element type="xs:string" name="SPCA-248-INFORMANTE"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-268-CH-DEVOLVIDO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-268-USUARIOS">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-268-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-268-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-268-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-268-TOTAL"/>
+                                <xs:element name="SPCA-268-DATA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-268-PRIMEIRA"/>
+                                      <xs:element type="xs:string" name="SPCA-268-ULTIMA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-282-PARTICIPACAO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-282-OUTRAS" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-282-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-282-RAZAO"/>
+                                <xs:element type="xs:string" name="SPCA-282-PESSOA"/>
+                                <xs:element type="xs:string" name="SPCA-282-DOCUMENTO"/>
+                                <xs:element type="xs:string" name="SPCA-282-MOEDA"/>
+                                <xs:element type="xs:string" name="SPCA-282-VALOR"/>
+                                <xs:element type="xs:string" name="SPCA-282-OBS"/>
+                                <xs:element type="xs:string" name="SPCA-282-PERC"/>
+                                <xs:element name="SPCA-282-DATA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="SPCA-282-ENTRADA"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:string" name="SPCA-282-FUNCAO"/>
+                                <xs:element type="xs:string" name="SPCA-282-PESSOA-2"/>
+                                <xs:element type="xs:string" name="SPCA-282-DOCUMENTO-2"/>
+                                <xs:element type="xs:string" name="SPCA-282-SOCIO"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-295-RELACAO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SPCA-295-REC-FAL-ACAO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-295-MENSAGEM"/>
+                                <xs:element type="xs:string" name="SPCA-295-TIPO"/>
+                                <xs:element type="xs:string" name="SPCA-295-VARA"/>
+                                <xs:element type="xs:string" name="SPCA-295-DATA"/>
+                                <xs:element type="xs:string" name="SPCA-295-PRACA"/>
+                                <xs:element type="xs:string" name="SPCA-295-UF"/>
+                                <xs:element type="xs:string" name="SPCA-295-CODIGO"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-500-IDENTIFICA">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-500-MENSAGEM"/>
+                          <xs:element type="xs:string" name="SPCA-500-PESSOA"/>
+                          <xs:element type="xs:string" name="SPCA-500-DOCUMENTO"/>
+                          <xs:element type="xs:string" name="SPCA-500-NOME"/>
+                          <xs:element type="xs:string" name="SPCA-500-MAE"/>
+                          <xs:element type="xs:string" name="SPCA-500-NASC"/>
+                          <xs:element type="xs:string" name="SPCA-500-RG"/>
+                          <xs:element type="xs:string" name="SPCA-500-EMISSOR"/>
+                          <xs:element type="xs:string" name="SPCA-500-UFRG"/>
+                          <xs:element type="xs:string" name="SPCA-500-EMISSAO"/>
+                          <xs:element type="xs:string" name="SPCA-500-SEXO"/>
+                          <xs:element type="xs:string" name="SPCA-500-NACIONAL"/>
+                          <xs:element type="xs:string" name="SPCA-500-CIVIL"/>
+                          <xs:element type="xs:string" name="SPCA-500-DEPENDENTES"/>
+                          <xs:element type="xs:string" name="SPCA-500-INSTRUCAO"/>
+                          <xs:element type="xs:string" name="SPCA-500-RECEITA"/>
+                          <xs:element type="xs:string" name="SPCA-500-ATUALIZACAO"/>
+                          <xs:element type="xs:string" name="SPCA-500-REGIAO"/>
+                          <xs:element type="xs:string" name="SPCA-500-OBITO"/>
+                          <xs:element type="xs:string" name="SPCA-500-TITULO"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-501-LOCALIZACAO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-501-MENSAGEM"/>
+                          <xs:element type="xs:string" name="SPCA-501-TIPO"/>
+                          <xs:element type="xs:string" name="SPCA-501-NOME"/>
+                          <xs:element type="xs:string" name="SPCA-501-NUMERO"/>
+                          <xs:element type="xs:string" name="SPCA-501-COMPLEMENTO"/>
+                          <xs:element type="xs:string" name="SPCA-501-BAIRRO"/>
+                          <xs:element type="xs:string" name="SPCA-501-CIDADE"/>
+                          <xs:element type="xs:string" name="SPCA-501-UF"/>
+                          <xs:element type="xs:string" name="SPCA-501-CEP"/>
+                          <xs:element type="xs:string" name="SPCA-501-DDD1"/>
+                          <xs:element type="xs:string" name="SPCA-501-TEL1"/>
+                          <xs:element type="xs:string" name="SPCA-501-DDD2"/>
+                          <xs:element type="xs:string" name="SPCA-501-TEL2"/>
+                          <xs:element type="xs:string" name="SPCA-501-DDD3"/>
+                          <xs:element type="xs:string" name="SPCA-501-TEL3"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-502-GRAFIAS" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-502-NOME"/>
+                          <xs:element type="xs:string" name="SPCA-502-CPF"/>
+                          <xs:element type="xs:string" name="SPCA-502-NASCIMENTO"/>
+                          <xs:element type="xs:string" name="SPCA-502-RG"/>
+                          <xs:element type="xs:string" name="SPCA-502-TIPO"/>
+                          <xs:element type="xs:string" name="SPCA-502-LOGRADOURO"/>
+                          <xs:element type="xs:string" name="SPCA-502-NUMERO"/>
+                          <xs:element type="xs:string" name="SPCA-502-COMPLEMENTO"/>
+                          <xs:element type="xs:string" name="SPCA-502-BAIRRO"/>
+                          <xs:element type="xs:string" name="SPCA-502-CIDADE"/>
+                          <xs:element type="xs:string" name="SPCA-502-UF"/>
+                          <xs:element type="xs:string" name="SPCA-502-CEP"/>
+                          <xs:element type="xs:string" name="SPCA-502-DDD1"/>
+                          <xs:element type="xs:string" name="SPCA-502-TEL1"/>
+                          <xs:element type="xs:string" name="SPCA-502-DDD2"/>
+                          <xs:element type="xs:string" name="SPCA-502-TEL2"/>
+                          <xs:element type="xs:string" name="SPCA-502-DDD3"/>
+                          <xs:element type="xs:string" name="SPCA-502-TEL3"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-601-SCORE-CRED" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-601-MENSAGEM"/>
+                          <xs:element type="xs:string" name="SPCA-601-PESSOA"/>
+                          <xs:element type="xs:string" name="SPCA-601-SCORE"/>
+                          <xs:element type="xs:string" name="SPCA-601-EXECUCAO"/>
+                          <xs:element name="SPCA-601-DESCRICAO">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-601-D-PLANO"/>
+                                <xs:element type="xs:string" name="SPCA-601-D-SCORE"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="SPCA-601-CLASSIFICA">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SPCA-601-C-NUMERICO"/>
+                                <xs:element type="xs:string" name="SPCA-601-C-ALFABETICO"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="SPCA-601-PROVAVEL"/>
+                          <xs:element type="xs:string" name="SPCA-601-TEXTO"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-603-DECISAO">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-603-MENSAGEM"/>
+                          <xs:element type="xs:string" name="SPCA-603-PESSOA"/>
+                          <xs:element type="xs:string" name="SPCA-603-DOCUMENTO"/>
+                          <xs:element type="xs:string" name="SPCA-603-SCORE"/>
+                          <xs:element type="xs:string" name="SPCA-603-APROVA"/>
+                          <xs:element type="xs:string" name="SPCA-603-TEXTO"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SPCA-940-MENSAGEM" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="SPCA-940-REFERENCIA"/>
+                          <xs:element type="xs:string" name="SPCA-940-TEXTO"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
