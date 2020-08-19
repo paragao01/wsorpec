@@ -63,7 +63,7 @@ public class ServicoPessoalPlus {
 		
 		return pesPlus.getXml();
 	}
-
+/*
 	public static void main(String[] args) {
 		PessoalPlus pesPlus = new PessoalPlus();
 		
@@ -89,4 +89,5 @@ public class ServicoPessoalPlus {
 		System.out.println(pesPlus.getMensagemRetorno());
 		
 	}
+*/
 }

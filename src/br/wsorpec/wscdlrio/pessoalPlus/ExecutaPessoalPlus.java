@@ -79,7 +79,7 @@ public class ExecutaPessoalPlus {
 			if(pesPlus.getSpcaxml().getRESPOSTA().getRESPOSTARETORNO().getSTATUSRESPOSTA().equals("0")) {
 				//Fazer a bilhetagem					
 				Bilhetagem bilhetar = new Bilhetagem();
-				bilhetar.bilhetar(GlobalConstants.idCliente, pesPlus.getCpf(), produto, ipRemoto, protocolo);
+				//bilhetar.bilhetar(GlobalConstants.idCliente, pesPlus.getCpf(), produto, ipRemoto, protocolo);
 			}
 			
 			//Atualizo a mensagem que veio do CDLRio para o WSOrpec

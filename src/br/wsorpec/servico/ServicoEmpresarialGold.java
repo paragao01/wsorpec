@@ -134,14 +134,14 @@ public class ServicoEmpresarialGold {
 
 		if(respostaXML==null || respostaXML=="" ||
 		   empGold.getSpcaxml().getRESPOSTA().getRESPOSTARETORNO().getSTATUSRESPOSTA()>0) {
-			respostaXML = "<SPCA-XML><SOLICITACAO><S-CODIGO>0</S-CODIGO><S-SENHA>0</S-SENHA><S-CONSULTA>52</S-CONSULTA><S-SOLICITANTE></S-SOLICITANTE><S-CNPJ>"+cnpj+"</S-CNPJ><S-TIPO-CREDITO>XX</S-TIPO-CREDITO><S-SPCNET-PRODUTO><S-SPCNET-CONSULTA>F1</S-SPCNET-CONSULTA></S-SPCNET-PRODUTO></SOLICITACAO><RESPOSTA><IP-SOLICITANTE>"+ip+"</IP-SOLICITANTE><RESPOSTA-RETORNO><STATUS-RESPOSTA>9</STATUS-RESPOSTA><MENSAGEM-RESPOSTA>ERRO:</MENSAGEM-RESPOSTA></RESPOSTA-RETORNO></RESPOSTA></SPCA-XML>";
+			respostaXML = "<SPCA-XML><SOLICITACAO><S-CODIGO>0</S-CODIGO><S-SENHA>0</S-SENHA><S-CONSULTA>74</S-CONSULTA><S-SOLICITANTE></S-SOLICITANTE><S-CNPJ>"+cnpj+"</S-CNPJ><S-TIPO-CREDITO>XX</S-TIPO-CREDITO><S-SPCNET-PRODUTO><S-SPCNET-CONSULTA>F1</S-SPCNET-CONSULTA></S-SPCNET-PRODUTO></SOLICITACAO><RESPOSTA><IP-SOLICITANTE>"+ip+"</IP-SOLICITANTE><RESPOSTA-RETORNO><STATUS-RESPOSTA>9</STATUS-RESPOSTA><MENSAGEM-RESPOSTA>ERRO:</MENSAGEM-RESPOSTA></RESPOSTA-RETORNO></RESPOSTA></SPCA-XML>";
 		}
 		respostaXML = Util.gravaTag("<S-CODIGO>", codigo, respostaXML);
 		respostaXML = Util.gravaTag("<S-SENHA>", "", respostaXML);
 		respostaXML = Util.gravaTag("<S-CNPJ>", cnpj, respostaXML);
 		respostaXML = Util.gravaTag("<STATUS-RESPOSTA>", String.valueOf((byte)empGold.getStatusRetorno()), respostaXML);			
 		respostaXML = Util.gravaTag("<MENSAGEM-RESPOSTA>", empGold.getMensagemRetorno(), respostaXML);
-		respostaXML = Util.gravaTag("<S-CONSULTA>", "623", respostaXML);
+		respostaXML = Util.gravaTag("<S-CONSULTA>", "74", respostaXML);
 		respostaXML = Util.gravaTag("<IP-SOLICITANTE>", GlobalConstants.IPREMOTO, respostaXML);
 		
 		empGold.setXml(respostaXML);
