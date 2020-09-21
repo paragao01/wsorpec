@@ -5,6 +5,7 @@ public class PessoalPlus {
 	private String codigo;
 	private String senha;
 	private String cpf;
+	private String uf;
 	private String mensagemRetorno;
 	private byte statusRetorno;
 	private SPCAXML spcaxml;
@@ -38,6 +39,14 @@ public class PessoalPlus {
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+
+	public String getUf() {
+		return uf;
+	}
+
+	public void setUf(String uf) {
+		this.uf = uf;
 	}
 
 	public String getMensagemRetorno() {

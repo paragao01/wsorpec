@@ -59,7 +59,7 @@ public class ExecutaBaixar {
 		}
 						
 		// Fazer a consulta nos BUREAU
-		//baixar = consultaCDLRio(baixar);
+		baixar = consultaCDLRio(baixar);
 		
 		//Fazer a bilhetagem 
 		//if(baixar.getCodigoRetorno().equals("1")) {

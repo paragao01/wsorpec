@@ -200,7 +200,7 @@ public class ServicoNegativacao {
 		
 		System.out.println(baixar(stream.toXML(baixar)));
 	}
-*/
+
 
 	public static void main(String[] args) {
 		XStream stream = new XStream(new DomDriver());
@@ -217,6 +217,6 @@ public class ServicoNegativacao {
 		System.out.println(listar(stream.toXML(listar)));
 		
 	}
-
+*/
 	
 }

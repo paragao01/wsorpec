@@ -11,8 +11,8 @@ public class ServicoPessoalPlus {
 	 * Servico Acerta - Obrigatorio informar todos os parametros
 	 * 
 	 */
-	public static PessoalPlus pessoalPlus(String codigo, String senha, String cpf) {
-		
+	public static PessoalPlus pessoalPlus(String codigo, String senha, String cpf, String uf) {
+
 		PessoalPlus pesPlus = new PessoalPlus();
 		ExecutaPessoalPlus executor = new ExecutaPessoalPlus();
 
@@ -20,6 +20,7 @@ public class ServicoPessoalPlus {
 		pesPlus.setCodigo(codigo);
 		pesPlus.setSenha(senha);
 		pesPlus.setCpf(cpf);
+		pesPlus.setUf(uf);
 		
 		GlobalConstants.IPREMOTO = Util.ipRemoto();
 		
@@ -27,7 +28,7 @@ public class ServicoPessoalPlus {
 
 	}
 	
-	public static String respostaXML(String codigo, String senha, String cpf, String ip) {
+	public static String respostaXML(String codigo, String senha, String cpf, String uf, String ip) {
 		String respostaXML = "";
 		PessoalPlus pesPlus = new PessoalPlus();
 		ExecutaPessoalPlus executor = new ExecutaPessoalPlus();
@@ -36,6 +37,7 @@ public class ServicoPessoalPlus {
 		pesPlus.setCodigo(codigo);
 		pesPlus.setSenha(senha);
 		pesPlus.setCpf(cpf);
+		pesPlus.setUf(uf);
 		
 		if((ip!=null) && (ip!="")) {
 			GlobalConstants.IPREMOTO = ip;
@@ -69,21 +71,20 @@ public class ServicoPessoalPlus {
 		
 		//pesPlus = pessoalPlus("00001", "08493296", "12312312387");
 		
-		System.out.println(respostaXML("00001", "08493296", "12312312387", "127.0.0.1"));
+		System.out.println(respostaXML("01001", "08493296", "12312312387", "SP", "127.0.0.1"));
 		
-		if(pesPlus.getSpcaxml().getRESPOSTA()!=null) {
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getIPSOLICITANTE());
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getNUMERORESPOSTA());
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getASSOCIADOSOLICITANTE());
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getNOMECONSULTA());
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getRESPOSTARETORNO().getSTATUSRESPOSTA());
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getRESPOSTARETORNO().getMENSAGEMRESPOSTA());	
-			System.out.println("************************************************");
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getREGISTROACSPSPCA().getSPCA126CONSULTA().get(0).getSPCA126TIPO());			
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getREGISTROACSPSPCA().getSPCA126CONSULTA().get(0).getSPCA126DESCRICAO());
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getREGISTROACSPSPCA().getSPCA126CONSULTA().get(0).getSPCA126DATA());			
-			System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getREGISTROACSPSPCA().getSPCA126CONSULTA().get(0).getSPCA126INFORMANTE());			
-		}
+		//if(pesPlus.getSpcaxml().getRESPOSTA()!=null) {
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getIPSOLICITANTE());
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getNUMERORESPOSTA());
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getASSOCIADOSOLICITANTE());
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getNOMECONSULTA());
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getRESPOSTARETORNO().getSTATUSRESPOSTA());
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getRESPOSTARETORNO().getMENSAGEMRESPOSTA());	
+		///	System.out.println("************************************************");
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getREGISTROACSPSPCA().getSPCA126CONSULTA().get(0).getSPCA126TIPO());			
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getREGISTROACSPSPCA().getSPCA126CONSULTA().get(0).getSPCA126DESCRICAO());
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getREGISTROACSPSPCA().getSPCA126CONSULTA().get(0).getSPCA126DATA());			
+		//	System.out.println(pesPlus.getSpcaxml().getRESPOSTA().getREGISTROACSPSPCA().getSPCA126CONSULTA().get(0).getSPCA126INFORMANTE());			
 		System.out.println("************************************************");		
 		System.out.println(pesPlus.getStatusRetorno());
 		System.out.println(pesPlus.getMensagemRetorno());

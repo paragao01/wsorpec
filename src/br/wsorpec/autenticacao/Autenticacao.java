@@ -69,7 +69,7 @@ public class Autenticacao extends Conexao {
 							resp = "Usuario sem login para negativacao ao fornecedor 1";
 						}
 					}
-					GlobalConstants.idCliente = rs.getInt("CodigoCliente");					
+					GlobalConstants.idCliente = idCliente; //rs.getInt("CodigoCliente"); Foi retirado em 15/09/2020 tem que gravar o idCliente			
 				}else{
 					resp = "Produto nao autorizado para esse usuario";
 				}
