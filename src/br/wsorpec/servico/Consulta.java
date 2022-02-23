@@ -35,6 +35,18 @@ public class Consulta {
 		System.out.println("Terceira  : "+consultaCrediOnline("12312312387", "cheques/cpf/", true, 3));
 		
 		System.out.println(getDateTime());
+/*	
+		String xml= "";
+		try {  
+			JSONObject json = XML.toJSONObject(xml);   
+			        String jsonString = json.toString(4);  
+			        System.out.println(jsonString);  
+			  
+		}catch (JSONException e) {  
+			// TODO: handle exception  
+			System.out.println(e.toString()); 
+		}
+*/
 
 	}	
 	

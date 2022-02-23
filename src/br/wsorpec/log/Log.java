@@ -1,14 +1,12 @@
 package br.wsorpec.log;
 
-import java.util.Calendar;
 import java.io.FileWriter;
-import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import br.wsorpec.util.GlobalConstants;
 import br.wsorpec.util.Util;
-
-import java.text.SimpleDateFormat;
 
 public class Log {
 	private FileWriter writer;
