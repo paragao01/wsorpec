@@ -13,6 +13,18 @@
 - [10. Manutenção](#10-manutenção)
 - [11. Diagramas](#11-diagramas)
 
+## Portal de Testes para Desenvolvedores
+
+O sistema inclui uma interface web de testes localizada em `html/index.html`.
+Essa tela permite que desenvolvedores e testadores acessem rapidamente formulários para testar todos os webservices disponíveis, tanto para CPF quanto para CNPJ.
+
+- **Acesso:** Abra `html/index.html` em seu navegador.
+- **Funcionalidade:** Navegue pelos links para acessar as telas de teste de cada serviço.
+- **Uso recomendado:**
+  - Testes manuais de integração
+  - Validação de respostas SOAP/XML
+  - Simulação de cenários de erro e sucesso
+
 ---
 
 ## 1. Visão Geral do Sistema

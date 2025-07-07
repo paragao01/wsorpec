@@ -27,6 +27,18 @@ wsorpec/
 2. Faça o deploy do projeto no Tomcat
 3. Acesse os serviços via `/services/` (Axis2)
 
+## Portal de Testes para Desenvolvedores
+
+O sistema inclui uma interface web de testes localizada em `html/index.html`.
+Essa tela permite que desenvolvedores e testadores acessem rapidamente formulários para testar todos os webservices disponíveis, tanto para CPF quanto para CNPJ.
+
+- **Acesso:** Abra `html/index.html` em seu navegador.
+- **Funcionalidade:** Navegue pelos links para acessar as telas de teste de cada serviço.
+- **Uso recomendado:**
+  - Testes manuais de integração
+  - Validação de respostas SOAP/XML
+  - Simulação de cenários de erro e sucesso
+
 ## Documentação Completa
 - [Documentação Técnica](./TECHNICAL_DOCUMENTATION.md): arquitetura, configuração, manutenção, diagramas
 - [Referência de API](./API_REFERENCE.md): endpoints, exemplos SOAP/XML/JSON
