@@ -1,17 +1,17 @@
 # 🛠️ Documentação Técnica - Webservices SPC
 
 ## 📖 Sumário
-- [Visão Geral do Sistema](#visão-geral-do-sistema)
-- [Arquitetura Geral](#arquitetura-geral)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Principais Classes e Responsabilidades](#principais-classes-e-responsabilidades)
-- [Padrões de Design Utilizados](#padrões-de-design-utilizados)
-- [Configurações](#configurações)
-- [Instalação e Deploy](#instalação-e-deploy)
-- [Testes e Validação](#testes-e-validação)
-- [Troubleshooting](#troubleshooting)
-- [Manutenção](#manutenção)
-- [Diagramas](#diagramas)
+- [👀 Visão Geral do Sistema](#-visão-geral-do-sistema)
+- [🏗️ Arquitetura Geral](#-arquitetura-geral)
+- [🗂️ Estrutura do Projeto](#-estrutura-do-projeto)
+- [🧩 Principais Classes e Responsabilidades](#-principais-classes-e-responsabilidades)
+- [🏷️ Padrões de Design Utilizados](#-padrões-de-design-utilizados)
+- [⚙️ Configurações](#-configurações)
+- [🚀 Instalação e Deploy](#-instalação-e-deploy)
+- [🧪 Testes e Validação](#-testes-e-validação)
+- [🛠️ Troubleshooting](#-troubleshooting)
+- [🔄 Manutenção](#-manutenção)
+- [🗺️ Diagramas](#-diagramas)
 
 ---
 
@@ -67,24 +67,103 @@ wsorpec/
 
 ---
 
-> ⚠️ As próximas seções detalharão endpoints, configurações, segurança, performance, etc.
+> ⚠️ As próximas seções detalham endpoints, configurações, segurança, performance, etc.
 
 ---
 
 ## 6. ⚙️ Configurações
-(Conteúdo da seção de configurações)
+As principais configurações do sistema estão em:
+- **Arquivo de parâmetros:** `wsorpec.conf` na raiz do projeto. Define conexões de banco, diretórios de log, URLs de integrações, credenciais e tempo de cache.
+  - Exemplo de parâmetros:
+    ```
+    DRVBANCO = net.sourceforge.jtds.jdbc.Driver
+    URLBANCO = jdbc:jtds:sqlserver://<host>:<porta>;databaseName=<nome>
+    USRBANCO = <usuario>
+    PWRBANCO = <senha>
+    PASTALOG = /logwsorpec/WSorpec
+    URLCDLRIO = https://www.scpc.inf.br/cgi-bin/spcaxml
+    ...
+    ```
+- **Configuração do Axis2:**
+  - `WebContent/WEB-INF/conf/axis2.xml` — parâmetros do Axis2, hot deployment, módulos, listeners, etc.
+- **Configuração do Tomcat:**
+  - `WebContent/WEB-INF/web.xml` — mapeamento de servlets, páginas de erro, arquivos de boas-vindas.
+
+> ℹ️ **Dica:** Sempre reinicie o Tomcat após alterações em arquivos de configuração.
 
 ## 7. 🚀 Instalação e Deploy
-(Conteúdo da seção de instalação e deploy)
+Veja também o [Guia de Deploy](./DEPLOYMENT_GUIDE.md) para detalhes completos.
+
+**Passos principais:**
+1. Instale Java 8, Tomcat 8/9 e Axis2.
+2. Configure o `wsorpec.conf` conforme ambiente.
+3. Compile o projeto usando Ant:
+   ```bash
+   ant -buildfile build.xml
+   ```
+4. Gere o WAR:
+   ```bash
+   jar -cvf wsorpec.war -C WebContent/ .
+   ```
+5. Faça o deploy do WAR no Tomcat (`webapps/`).
+6. Reinicie o Tomcat e acesse `http://<servidor>:8080/wsorpec/services/`.
+
+> 💡 Consulte logs em caso de erro: `logs/catalina.out`, `logwsorpec/`, etc.
 
 ## 8. 🧪 Testes e Validação
-(Conteúdo da seção de testes e validação)
+- **Testes manuais:**
+  - Use o portal de testes em [`html/index.html`](html/index.html) para simular chamadas aos serviços.
+  - Valide respostas SOAP/XML e JSON.
+- **Testes automatizados:**
+  - O projeto pode ser testado via scripts de integração (ex: SoapUI, Postman) usando os endpoints SOAP expostos.
+- **Testes de build:**
+  - O `build.xml` possui targets para compilar e empacotar o projeto.
+
+> ℹ️ **Dica:** Sempre valide credenciais e parâmetros antes de testar integrações.
 
 ## 9. 🛠️ Troubleshooting
-(Conteúdo da seção de troubleshooting)
+Veja também o [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) para problemas comuns.
+
+- **Serviço não aparece no Axis2:**
+  - Verifique `services.xml` e classes compiladas.
+  - Reinicie o Tomcat após alterações.
+- **Erro 404/500:**
+  - Confirme a URL e consulte logs do Tomcat e do sistema.
+- **Falha de autenticação:**
+  - Verifique `codigo` e `senha` enviados.
+  - Valide junto ao SPC se as credenciais estão ativas.
+- **Timeout ou lentidão:**
+  - Monitore recursos do servidor e consulte logs.
+- **Logs importantes:**
+  - Tomcat: `logs/catalina.out`, `logs/localhost.*.log`
+  - Sistema: `logwsorpec/`
+  - Axis2: conforme configuração
 
 ## 10. 🔄 Manutenção
-(Conteúdo da seção de manutenção)
+- **Backup:**
+  - Faça backup regular dos arquivos de configuração e logs.
+- **Limpeza de logs:**
+  - Monitore e limpe periodicamente o diretório `logwsorpec/` para evitar consumo excessivo de disco.
+- **Atualização de dependências:**
+  - Atualize bibliotecas Java e Axis2 conforme necessário.
+- **Revisão de credenciais:**
+  - Altere senhas padrão e restrinja acesso à administração do Axis2.
+- **Monitoramento:**
+  - Utilize ferramentas de monitoramento do Tomcat e do sistema operacional.
 
 ## 11. 🗺️ Diagramas
-(Conteúdo da seção de diagramas) 
+- **Diagrama de arquitetura:** (ver seção 2)
+- **Fluxo de autenticação e consulta:**
+
+```mermaid
+graph LR;
+  Usuario[Usuário] --> ["Chamada SOAP"] --> Servico[Serviço SOAP]
+  Servico --> Autenticacao[Autenticação]
+  Servico --> Banco[Banco de Dados]
+  Servico --> IntegracaoSPC[Integração SPC/CDLRio/CrediOnline]
+  Servico --> Log[Log]
+  Servico --> Cache[Cache]
+  Servico --> ["Resposta SOAP/JSON"] --> Usuario
+```
+
+> ℹ️ Para mais diagramas, consulte a seção de arquitetura ou crie fluxos específicos conforme necessidade. 
