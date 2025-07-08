@@ -1,6 +1,24 @@
-# Referência de API - Webservices SPC
+# 📑 Referência de API - Webservices SPC
 
-## Endpoints Disponíveis
+## 📖 Sumário
+- [Endpoints Disponíveis](#endpoints-disponíveis)
+- [1. Busca Endereço/Telefone CNPJ](#1-busca-endereçotelefone-cnpj)
+- [2. Busca Endereço/Telefone CPF](#2-busca-endereçotelefone-cpf)
+- [3. Empresarial Gold](#3-empresarial-gold)
+- [4. Empresarial Top](#4-empresarial-top)
+- [5. Negativação](#5-negativação)
+- [6. Orpec Empresarial](#6-orpec-empresarial)
+- [7. Orpec Pessoal](#7-orpec-pessoal)
+- [8. Pessoal Gold](#8-pessoal-gold)
+- [9. Pessoal Plus](#9-pessoal-plus)
+- [10. SPCNet Estadual CNPJ](#10-spcnet-estadual-cnpj)
+- [11. SPCNet Estadual CPF](#11-spcnet-estadual-cpf)
+- [12. SPCNet Nacional CNPJ](#12-spcnet-nacional-cnpj)
+- [13. SPCNet Nacional CPF](#13-spcnet-nacional-cpf)
+
+---
+
+## 🟢 Endpoints Disponíveis
 
 | Serviço                        | Classe Responsável                        | Descrição                                      |
 |--------------------------------|-------------------------------------------|------------------------------------------------|
@@ -20,7 +38,11 @@
 
 ---
 
-## 1. Busca Endereço/Telefone CNPJ
+> ℹ️ **Dica:** Consulte exemplos de request/response SOAP/JSON em cada seção.
+
+---
+
+## 1. 🔎 Busca Endereço/Telefone CNPJ
 - **Classe:** `ServicoBuscaEndTelefoneCnpj`
 - **Métodos:**
   - `buscaEndTelefoneCnpj(String codigo, String senha, String cnpj)`
@@ -32,17 +54,17 @@
   - `cnpj` (String): CNPJ da empresa
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 2. Busca Endereço/Telefone CPF
+## 2. 🔎 Busca Endereço/Telefone CPF
 - **Classe:** `ServicoBuscaEndTelefoneCpf`
 - **Métodos:**
   - `buscaEndTelefoneCpf(String codigo, String senha, String cpf)`
@@ -54,17 +76,17 @@
   - `cpf` (String): CPF da pessoa
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 3. Empresarial Gold
+## 3. 🏢 Empresarial Gold
 - **Classe:** `ServicoEmpresarialGold`
 - **Métodos:**
   - `empresarialGold(String codigo, String senha, String cnpj, ...)`
@@ -73,17 +95,17 @@
 - **Parâmetros:**
   - Diversos parâmetros relacionados a dados bancários, cheques, quadro societário, etc.
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 4. Empresarial Top
+## 4. 🏢 Empresarial Top
 - **Classe:** `ServicoEmpresarialTop`
 - **Métodos:**
   - `empresarialTop(String codigo, String senha, String cnpj)`
@@ -95,17 +117,17 @@
   - `cnpj` (String): CNPJ da empresa
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 5. Negativação
+## 5. 🚫 Negativação
 - **Classe:** `ServicoNegativacao`
 - **Métodos:**
   - `incluir(String xml)`
@@ -115,17 +137,17 @@
 - **Parâmetros:**
   - `xml` (String): XML estruturado conforme modelo de inclusão/baixa/listagem
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 6. Orpec Empresarial
+## 6. 📊 Orpec Empresarial
 - **Classe:** `ServicoOrpecEmpresarial`
 - **Métodos:**
   - `orpecEmpresarial(String codigo, String senha, String cnpj)`
@@ -137,17 +159,17 @@
   - `cnpj` (String): CNPJ da empresa
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response JSON:**
-  ```json
-  <!-- Exemplo a ser detalhado -->
-  ```
+```json
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 7. Orpec Pessoal
+## 7. 📊 Orpec Pessoal
 - **Classe:** `ServicoOrpecPessoal`
 - **Métodos:**
   - `orpecPessoal(String codigo, String senha, String cpf)`
@@ -159,17 +181,17 @@
   - `cpf` (String): CPF da pessoa
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response JSON:**
-  ```json
-  <!-- Exemplo a ser detalhado -->
-  ```
+```json
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 8. Pessoal Gold
+## 8. 👤 Pessoal Gold
 - **Classe:** `ServicoPessoalGold`
 - **Métodos:**
   - `pessoalGold(String codigo, String senha, String cpf)`
@@ -181,17 +203,17 @@
   - `cpf` (String): CPF da pessoa
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 9. Pessoal Plus
+## 9. 👤 Pessoal Plus
 - **Classe:** `ServicoPessoalPlus`
 - **Métodos:**
   - `pessoalPlus(String codigo, String senha, String cpf, String uf)`
@@ -204,17 +226,17 @@
   - `uf` (String): UF da consulta
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 10. SPCNet Estadual CNPJ
+## 10. 🏢 SPCNet Estadual CNPJ
 - **Classe:** `ServicoSpcNetEstadualCnpj`
 - **Métodos:**
   - `spcnetEstCnpj(String codigo, String senha, String cnpj, String uf)`
@@ -227,17 +249,17 @@
   - `uf` (String): UF da consulta
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 11. SPCNet Estadual CPF
+## 11. 👤 SPCNet Estadual CPF
 - **Classe:** `ServicoSpcNetEstadualCpf`
 - **Métodos:**
   - `spcnetEstCpf(String codigo, String senha, String cpf, String uf)`
@@ -250,17 +272,17 @@
   - `uf` (String): UF da consulta
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 12. SPCNet Nacional CNPJ
+## 12. 🏢 SPCNet Nacional CNPJ
 - **Classe:** `ServicoSpcNetNacionalCnpj`
 - **Métodos:**
   - `spcnetNacCnpj(String codigo, String senha, String cnpj)`
@@ -272,17 +294,17 @@
   - `cnpj` (String): CNPJ da empresa
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-## 13. SPCNet Nacional CPF
+## 13. 👤 SPCNet Nacional CPF
 - **Classe:** `ServicoSpcNetNacionalCpf`
 - **Métodos:**
   - `spcnetNacCpf(String codigo, String senha, String cpf)`
@@ -294,14 +316,14 @@
   - `cpf` (String): CPF da pessoa
   - `ip` (String, opcional): IP do solicitante
 - **Exemplo de Request SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 - **Exemplo de Response SOAP:**
-  ```xml
-  <!-- Exemplo a ser detalhado -->
-  ```
+```xml
+<!-- Exemplo a ser detalhado -->
+```
 
 ---
 
-(Os demais serviços serão detalhados nas próximas seções) 
+> ℹ️ *Os demais serviços serão detalhados nas próximas seções.* 

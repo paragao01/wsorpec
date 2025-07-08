@@ -1,24 +1,25 @@
-# Documentação Técnica - Webservices SPC
+# 🛠️ Documentação Técnica - Webservices SPC
 
-## Índice
-- [1. Visão Geral do Sistema](#1-visão-geral-do-sistema)
-- [2. Arquitetura Geral](#2-arquitetura-geral)
-- [3. Estrutura do Projeto](#3-estrutura-do-projeto)
-- [4. Principais Classes e Responsabilidades](#4-principais-classes-e-responsabilidades)
-- [5. Padrões de Design Utilizados](#5-padrões-de-design-utilizados)
-- [6. Configurações](#6-configurações)
-- [7. Instalação e Deploy](#7-instalação-e-deploy)
-- [8. Testes e Validação](#8-testes-e-validação)
-- [9. Troubleshooting](#9-troubleshooting)
-- [10. Manutenção](#10-manutenção)
-- [11. Diagramas](#11-diagramas)
+## 📖 Sumário
+- [Visão Geral do Sistema](#visão-geral-do-sistema)
+- [Arquitetura Geral](#arquitetura-geral)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Principais Classes e Responsabilidades](#principais-classes-e-responsabilidades)
+- [Padrões de Design Utilizados](#padrões-de-design-utilizados)
+- [Configurações](#configurações)
+- [Instalação e Deploy](#instalação-e-deploy)
+- [Testes e Validação](#testes-e-validação)
+- [Troubleshooting](#troubleshooting)
+- [Manutenção](#manutenção)
+- [Diagramas](#diagramas)
 
-## Portal de Testes para Desenvolvedores
+---
 
-O sistema inclui uma interface web de testes localizada em `html/index.html`.
-Essa tela permite que desenvolvedores e testadores acessem rapidamente formulários para testar todos os webservices disponíveis, tanto para CPF quanto para CNPJ.
+## 🧪 Portal de Testes para Desenvolvedores
 
-- **Acesso:** Abra `html/index.html` em seu navegador.
+O sistema inclui uma interface web de testes localizada em [`html/index.html`](html/index.html).
+
+- **Acesso:** Abra o arquivo em seu navegador.
 - **Funcionalidade:** Navegue pelos links para acessar as telas de teste de cada serviço.
 - **Uso recomendado:**
   - Testes manuais de integração
@@ -27,10 +28,10 @@ Essa tela permite que desenvolvedores e testadores acessem rapidamente formulár
 
 ---
 
-## 1. Visão Geral do Sistema
+## 1. 👀 Visão Geral do Sistema
 Sistema legado para consultas a produtos do SPC, exposto via webservices SOAP (Axis2) em ambiente Tomcat.
 
-## 2. Arquitetura Geral
+## 2. 🏗️ Arquitetura Geral
 - Backend Java 8
 - Webservices SOAP (Axis2)
 - Deploy em Apache Tomcat
@@ -44,8 +45,8 @@ graph TD;
   Integracao --> SPC["Serviço SPC Externo"]
 ```
 
-## 3. Estrutura do Projeto
-```
+## 3. 🗂️ Estrutura do Projeto
+```text
 wsorpec/
   ├── src/br/wsorpec/servico/         # Serviços expostos (endpoints)
   ├── src/br/wsorpec/wscdlrio/        # Integrações e módulos de negócio
@@ -53,33 +54,37 @@ wsorpec/
   └── ...
 ```
 
-## 4. Principais Classes e Responsabilidades
+## 4. 🧩 Principais Classes e Responsabilidades
 - `src/br/wsorpec/servico/`: Serviços SOAP expostos
 - `src/br/wsorpec/wscdlrio/`: Integrações e lógica de negócio SPC
 - `WebContent/WEB-INF/web.xml`: Configuração do servlet Axis2
 - `WebContent/WEB-INF/conf/axis2.xml`: Configuração global do Axis2
 - `WebContent/WEB-INF/services/`: Serviços Axis2 e arquivos services.xml
 
-## 5. Padrões de Design Utilizados
+## 5. 🏷️ Padrões de Design Utilizados
 - Separação de serviços (endpoint) e integrações
 - Utilização de Axis2 para exposição de webservices
 
-(As próximas seções detalharão endpoints, configurações, segurança, performance, etc.) 
+---
 
-# 6. Configurações
+> ⚠️ As próximas seções detalharão endpoints, configurações, segurança, performance, etc.
+
+---
+
+## 6. ⚙️ Configurações
 (Conteúdo da seção de configurações)
 
-# 7. Instalação e Deploy
+## 7. 🚀 Instalação e Deploy
 (Conteúdo da seção de instalação e deploy)
 
-# 8. Testes e Validação
+## 8. 🧪 Testes e Validação
 (Conteúdo da seção de testes e validação)
 
-# 9. Troubleshooting
+## 9. 🛠️ Troubleshooting
 (Conteúdo da seção de troubleshooting)
 
-# 10. Manutenção
+## 10. 🔄 Manutenção
 (Conteúdo da seção de manutenção)
 
-# 11. Diagramas
+## 11. 🗺️ Diagramas
 (Conteúdo da seção de diagramas) 
