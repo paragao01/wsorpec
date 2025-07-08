@@ -1,17 +1,17 @@
 # 🛠️ Documentação Técnica - Webservices SPC
 
 ## 📖 Sumário
-- [👀 Visão Geral do Sistema](#-visão-geral-do-sistema)
-- [🏗️ Arquitetura Geral](#-arquitetura-geral)
-- [🗂️ Estrutura do Projeto](#-estrutura-do-projeto)
-- [🧩 Principais Classes e Responsabilidades](#-principais-classes-e-responsabilidades)
-- [🏷️ Padrões de Design Utilizados](#-padrões-de-design-utilizados)
-- [⚙️ Configurações](#-configurações)
-- [🚀 Instalação e Deploy](#-instalação-e-deploy)
-- [🧪 Testes e Validação](#-testes-e-validação)
-- [🛠️ Troubleshooting](#-troubleshooting)
-- [🔄 Manutenção](#-manutenção)
-- [🗺️ Diagramas](#-diagramas)
+- [Visão Geral do Sistema](#1-visao-geral-do-sistema)
+- [Arquitetura Geral](#2-arquitetura-geral)
+- [Estrutura do Projeto](#3-estrutura-do-projeto)
+- [Principais Classes e Responsabilidades](#4-principais-classes-e-responsabilidades)
+- [Padrões de Design Utilizados](#5-padroes-de-design-utilizados)
+- [Configurações](#6-configuracoes)
+- [Instalação e Deploy](#7-instalacao-e-deploy)
+- [Testes e Validação](#8-testes-e-validacao)
+- [Troubleshooting](#9-troubleshooting)
+- [Manutenção](#10-manutencao)
+- [Diagramas](#11-diagramas)
 
 ---
 
