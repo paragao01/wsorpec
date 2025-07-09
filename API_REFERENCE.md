@@ -1,12 +1,12 @@
 # 📑 Referência de API - Webservices SPC
 
 ## 📖 Sumário
-- [Endpoints Disponíveis](#endpoints-disponíveis)
-- [1. Busca Endereço/Telefone CNPJ](#1-busca-endereçotelefone-cnpj)
-- [2. Busca Endereço/Telefone CPF](#2-busca-endereçotelefone-cpf)
+- [Endpoints Disponiveis](#endpoints-disponiveis)
+- [1. Busca EnderecoTelefone CNPJ](#1-busca-enderecotelefone-cnpj)
+- [2. Busca EnderecoTelefone CPF](#2-busca-enderecotelefone-cpf)
 - [3. Empresarial Gold](#3-empresarial-gold)
 - [4. Empresarial Top](#4-empresarial-top)
-- [5. Negativação](#5-negativação)
+- [5. Negativacao](#5-negativacao)
 - [6. Orpec Empresarial](#6-orpec-empresarial)
 - [7. Orpec Pessoal](#7-orpec-pessoal)
 - [8. Pessoal Gold](#8-pessoal-gold)
@@ -18,15 +18,15 @@
 
 ---
 
-## 🟢 Endpoints Disponíveis
+## 🟢 Endpoints Disponiveis
 
 | Serviço                        | Classe Responsável                        | Descrição                                      |
 |--------------------------------|-------------------------------------------|------------------------------------------------|
-| Busca Endereço/Telefone CNPJ   | ServicoBuscaEndTelefoneCnpj               | Consulta dados de endereço/telefone por CNPJ    |
-| Busca Endereço/Telefone CPF    | ServicoBuscaEndTelefoneCpf                | Consulta dados de endereço/telefone por CPF     |
+| Busca EnderecoTelefone CNPJ   | ServicoBuscaEndTelefoneCnpj               | Consulta dados de endereço/telefone por CNPJ    |
+| Busca EnderecoTelefone CPF    | ServicoBuscaEndTelefoneCpf                | Consulta dados de endereço/telefone por CPF     |
 | Empresarial Gold               | ServicoEmpresarialGold                    | Consulta completa empresarial (Gold) por CNPJ   |
 | Empresarial Top                | ServicoEmpresarialTop                     | Consulta empresarial simplificada por CNPJ      |
-| Negativação                    | ServicoNegativacao                        | Inclusão, baixa e listagem de negativação      |
+| Negativacao                    | ServicoNegativacao                        | Inclusão, baixa e listagem de negativação      |
 | Orpec Empresarial              | ServicoOrpecEmpresarial                   | Relatório empresarial detalhado (JSON)          |
 | Orpec Pessoal                  | ServicoOrpecPessoal                       | Relatório pessoal detalhado (JSON)              |
 | Pessoal Gold                   | ServicoPessoalGold                        | Consulta completa de pessoa física (Gold)       |
@@ -42,7 +42,7 @@
 
 ---
 
-## 1. 🔎 Busca Endereço/Telefone CNPJ
+## 1. Busca EnderecoTelefone CNPJ
 - **Classe:** `ServicoBuscaEndTelefoneCnpj`
 - **Métodos:**
   - `buscaEndTelefoneCnpj(String codigo, String senha, String cnpj)`
@@ -64,7 +64,7 @@
 
 ---
 
-## 2. 🔎 Busca Endereço/Telefone CPF
+## 2. Busca EnderecoTelefone CPF
 - **Classe:** `ServicoBuscaEndTelefoneCpf`
 - **Métodos:**
   - `buscaEndTelefoneCpf(String codigo, String senha, String cpf)`
@@ -86,7 +86,7 @@
 
 ---
 
-## 3. 🏢 Empresarial Gold
+## 3. Empresarial Gold
 - **Classe:** `ServicoEmpresarialGold`
 - **Métodos:**
   - `empresarialGold(String codigo, String senha, String cnpj, ...)`
@@ -105,7 +105,7 @@
 
 ---
 
-## 4. 🏢 Empresarial Top
+## 4. Empresarial Top
 - **Classe:** `ServicoEmpresarialTop`
 - **Métodos:**
   - `empresarialTop(String codigo, String senha, String cnpj)`
@@ -127,7 +127,7 @@
 
 ---
 
-## 5. 🚫 Negativação
+## 5. Negativacao
 - **Classe:** `ServicoNegativacao`
 - **Métodos:**
   - `incluir(String xml)`
@@ -147,7 +147,7 @@
 
 ---
 
-## 6. 📊 Orpec Empresarial
+## 6. Orpec Empresarial
 - **Classe:** `ServicoOrpecEmpresarial`
 - **Métodos:**
   - `orpecEmpresarial(String codigo, String senha, String cnpj)`
@@ -169,7 +169,7 @@
 
 ---
 
-## 7. 📊 Orpec Pessoal
+## 7. Orpec Pessoal
 - **Classe:** `ServicoOrpecPessoal`
 - **Métodos:**
   - `orpecPessoal(String codigo, String senha, String cpf)`
@@ -191,7 +191,7 @@
 
 ---
 
-## 8. 👤 Pessoal Gold
+## 8. Pessoal Gold
 - **Classe:** `ServicoPessoalGold`
 - **Métodos:**
   - `pessoalGold(String codigo, String senha, String cpf)`
@@ -213,7 +213,7 @@
 
 ---
 
-## 9. 👤 Pessoal Plus
+## 9. Pessoal Plus
 - **Classe:** `ServicoPessoalPlus`
 - **Métodos:**
   - `pessoalPlus(String codigo, String senha, String cpf, String uf)`
@@ -236,7 +236,7 @@
 
 ---
 
-## 10. 🏢 SPCNet Estadual CNPJ
+## 10. SPCNet Estadual CNPJ
 - **Classe:** `ServicoSpcNetEstadualCnpj`
 - **Métodos:**
   - `spcnetEstCnpj(String codigo, String senha, String cnpj, String uf)`
@@ -259,7 +259,7 @@
 
 ---
 
-## 11. 👤 SPCNet Estadual CPF
+## 11. SPCNet Estadual CPF
 - **Classe:** `ServicoSpcNetEstadualCpf`
 - **Métodos:**
   - `spcnetEstCpf(String codigo, String senha, String cpf, String uf)`
@@ -282,7 +282,7 @@
 
 ---
 
-## 12. 🏢 SPCNet Nacional CNPJ
+## 12. SPCNet Nacional CNPJ
 - **Classe:** `ServicoSpcNetNacionalCnpj`
 - **Métodos:**
   - `spcnetNacCnpj(String codigo, String senha, String cnpj)`
@@ -304,7 +304,7 @@
 
 ---
 
-## 13. 👤 SPCNet Nacional CPF
+## 13. SPCNet Nacional CPF
 - **Classe:** `ServicoSpcNetNacionalCpf`
 - **Métodos:**
   - `spcnetNacCpf(String codigo, String senha, String cpf)`
