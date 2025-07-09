@@ -1,17 +1,17 @@
 # 🛠️ Documentação Técnica - Webservices SPC
 
 ## 📖 Sumário
-- [Visão Geral do Sistema](#1-👀-visão-geral-do-sistema)
-- [Arquitetura Geral](#2-🏗️-arquitetura-geral)
-- [Estrutura do Projeto](#3-🗂️-estrutura-do-projeto)
-- [Principais Classes e Responsabilidades](#4-🧩-principais-classes-e-responsabilidades)
-- [Padrões de Design Utilizados](#5-🏷️-padrões-de-design-utilizados)
-- [Configurações](#6-⚙️-configurações)
-- [Instalação e Deploy](#7-🚀-instalação-e-deploy)
-- [Testes e Validação](#8-🧪-testes-e-validação)
-- [Troubleshooting](#9-🛠️-troubleshooting)
-- [Manutenção](#10-🔄-manutenção)
-- [Diagramas](#11-🗺️-diagramas)
+- [Visao Geral do Sistema](#1-visao-geral-do-sistema)
+- [Arquitetura Geral](#2-arquitetura-geral)
+- [Estrutura do Projeto](#3-estrutura-do-projeto)
+- [Principais Classes e Responsabilidades](#4-principais-classes-e-responsabilidades)
+- [Padroes de Design Utilizados](#5-padroes-de-design-utilizados)
+- [Configuracoes](#6-configuracoes)
+- [Instalacao e Deploy](#7-instalacao-e-deploy)
+- [Testes e Validacao](#8-testes-e-validacao)
+- [Troubleshooting](#9-troubleshooting)
+- [Manutencao](#10-manutencao)
+- [Diagramas](#11-diagramas)
 
 ---
 
@@ -28,10 +28,10 @@ O sistema inclui uma interface web de testes localizada em [`html/index.html`](h
 
 ---
 
-## 1. 👀 Visão Geral do Sistema
+## 1. Visao Geral do Sistema
 Sistema legado para consultas a produtos do SPC, exposto via webservices SOAP (Axis2) em ambiente Tomcat.
 
-## 2. 🏗️ Arquitetura Geral
+## 2. Arquitetura Geral
 - Backend Java 8
 - Webservices SOAP (Axis2)
 - Deploy em Apache Tomcat
@@ -45,7 +45,7 @@ graph TD;
   Integracao --> SPC["Serviço SPC Externo"]
 ```
 
-## 3. 🗂️ Estrutura do Projeto
+## 3. Estrutura do Projeto
 ```text
 wsorpec/
   ├── src/br/wsorpec/servico/         # Serviços expostos (endpoints)
@@ -54,14 +54,14 @@ wsorpec/
   └── ...
 ```
 
-## 4. 🧩 Principais Classes e Responsabilidades
+## 4. Principais Classes e Responsabilidades
 - `src/br/wsorpec/servico/`: Serviços SOAP expostos
 - `src/br/wsorpec/wscdlrio/`: Integrações e lógica de negócio SPC
 - `WebContent/WEB-INF/web.xml`: Configuração do servlet Axis2
 - `WebContent/WEB-INF/conf/axis2.xml`: Configuração global do Axis2
 - `WebContent/WEB-INF/services/`: Serviços Axis2 e arquivos services.xml
 
-## 5. 🏷️ Padrões de Design Utilizados
+## 5. Padroes de Design Utilizados
 - Separação de serviços (endpoint) e integrações
 - Utilização de Axis2 para exposição de webservices
 
@@ -71,7 +71,7 @@ wsorpec/
 
 ---
 
-## 6. ⚙️ Configurações
+## 6. Configuracoes
 As principais configurações do sistema estão em:
 - **Arquivo de parâmetros:** `wsorpec.conf` na raiz do projeto. Define conexões de banco, diretórios de log, URLs de integrações, credenciais e tempo de cache.
   - Exemplo de parâmetros:
@@ -91,7 +91,7 @@ As principais configurações do sistema estão em:
 
 > ℹ️ **Dica:** Sempre reinicie o Tomcat após alterações em arquivos de configuração.
 
-## 7. 🚀 Instalação e Deploy
+## 7. Instalacao e Deploy
 Veja também o [Guia de Deploy](./DEPLOYMENT_GUIDE.md) para detalhes completos.
 
 **Passos principais:**
@@ -110,7 +110,7 @@ Veja também o [Guia de Deploy](./DEPLOYMENT_GUIDE.md) para detalhes completos.
 
 > 💡 Consulte logs em caso de erro: `logs/catalina.out`, `logwsorpec/`, etc.
 
-## 8. 🧪 Testes e Validação
+## 8. Testes e Validacao
 - **Testes manuais:**
   - Use o portal de testes em [`html/index.html`](html/index.html) para simular chamadas aos serviços.
   - Valide respostas SOAP/XML e JSON.
@@ -121,7 +121,7 @@ Veja também o [Guia de Deploy](./DEPLOYMENT_GUIDE.md) para detalhes completos.
 
 > ℹ️ **Dica:** Sempre valide credenciais e parâmetros antes de testar integrações.
 
-## 9. 🛠️ Troubleshooting
+## 9. Troubleshooting
 Veja também o [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) para problemas comuns.
 
 - **Serviço não aparece no Axis2:**
@@ -139,7 +139,7 @@ Veja também o [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) para problemas comuns.
   - Sistema: `logwsorpec/`
   - Axis2: conforme configuração
 
-## 10. 🔄 Manutenção
+## 10. Manutencao
 - **Backup:**
   - Faça backup regular dos arquivos de configuração e logs.
 - **Limpeza de logs:**
@@ -151,7 +151,7 @@ Veja também o [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) para problemas comuns.
 - **Monitoramento:**
   - Utilize ferramentas de monitoramento do Tomcat e do sistema operacional.
 
-## 11. 🗺️ Diagramas
+## 11. Diagramas
 - **Diagrama de arquitetura:** (ver seção 2)
 - **Fluxo de autenticação e consulta:**
 
