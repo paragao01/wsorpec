@@ -1,14 +1,14 @@
 # 🛠️ Troubleshooting - Webservices SPC
 
 ## 📖 Sumário
-- [Problemas Comuns](#problemas-comuns)
-- [Logs Importantes](#logs-importantes)
-- [Pontos de Atenção](#pontos-de-atenção)
-- [Links Úteis](#links-úteis)
+- [Problemas Comuns](#1-problemas-comuns)
+- [Logs Importantes](#2-logs-importantes)
+- [Pontos de Atencao](#3-pontos-de-atencao)
+- [Links Uteis](#4-links-uteis)
 
 ---
 
-## 1. ❗ Problemas Comuns
+## 1. Problemas Comuns
 
 ### 🚫 Serviço não aparece na lista do Axis2
 - Verifique o `services.xml` e a presença das classes compiladas.
@@ -33,14 +33,14 @@
 
 ---
 
-## 2. 📄 Logs Importantes
+## 2. Logs Importantes
 - Tomcat: `logs/catalina.out`, `logs/localhost.*.log`
 - Sistema: `logwsorpec/`
 - Axis2: conforme configuração
 
 ---
 
-## 3. ⚠️ Pontos de Atenção
+## 3. Pontos de Atencao
 - Sempre reinicie o Tomcat após alterações.
 - Faça backup dos arquivos de configuração.
 - Restrinja acesso à administração do Axis2.
@@ -48,7 +48,7 @@
 
 ---
 
-## 4. 🔗 Links Úteis
+## 4. Links Uteis
 - [Documentação Técnica](./TECHNICAL_DOCUMENTATION.md)
 - [Referência de API](./API_REFERENCE.md)
 - [Guia de Deploy](./DEPLOYMENT_GUIDE.md) 
